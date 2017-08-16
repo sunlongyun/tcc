@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">  
+    <dubbo:application name="comAmount"  />  
+    <dubbo:registry id="zoo" address="zookeeper://master:2181?backup=n1:2181,n2:2181" />
+    <dubbo:protocol name="dubbo" port="20880" />
+    
+	<dubbo:service interface="spring.service.ComAccountService" ref="comAccountService"/> 
+	<dubbo:service interface="spring.service.UserAccountService" ref="userAccountService"/>    
+</beans>
