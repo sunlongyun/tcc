@@ -10,13 +10,18 @@
 二、	该tcc 分布式事务框架使用步骤
 
 1.tcc-util-0.0.1.jar加入自己资源库
+
+
 2.pom 引用
 
     <dependency>
 	   <groupId>tcc</groupId>
 	  <artifactId>tcc-util</artifactId>
 	  <version>0.0.1-SNAPSHOT</version>
-   </dependency>
+	  </dependency>
+   
+   
+   
    
    
 3.自定义service实现接口tcc。例如：
