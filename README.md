@@ -68,4 +68,9 @@
 	5.	使用分布式事务
    
 		TccServiceUtil.executeService(TccServiceImpl.class, params);
+		
+三、 源码用例说明
+	1.	customer远程服务使用方，及tcc分布式事务的使用节点
+	2.	remoteService 远程service提供方
+	3.  tcc-util-0.0.1.jar， customer需要引用的jar
    
