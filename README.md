@@ -70,7 +70,7 @@
    
    
    
-   5.使用分布式事务
+   5.	使用分布式事务
    
    TccServiceUtil.executeService(TccServiceImpl.class, params);
    
