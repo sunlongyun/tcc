@@ -2,8 +2,13 @@
 一、	该tcc分布式事务框架特点
 
 1.支持分布式环境下的负载均衡，减少服务器压力
+
 2.有效解决单点故障。某消费者获得service任务后，突然宕机。其他线程可以继续执行该任务，不会出现任务丢失或者任务执行一部分的状态。
+
+
 3.业务逻辑解耦，用户只需要关注业务逻辑（实现tcc接口）。该插件保证业务的事务一致性。
+
+
 
 
 
@@ -44,6 +49,9 @@
 4. 	创建tcc工具类的bean，需要注入属性jedisConnectionFactory
   
   例如：
+  
+  
+  
   <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"> 
         <property name="maxIdle" value="50" /> 
         <property name="maxTotal" value="10" /> 
@@ -62,6 +70,11 @@
    <bean class="spring.tcc.service.TccServiceUtil">
    	<property name="jedisConnectionFactory" ref="jedisConnectionFactory"></property>
    </bean>
+   
+   
+   
+   
+   
    
    5.使用分布式事务
    
