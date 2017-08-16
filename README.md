@@ -1,4 +1,5 @@
 #tcc分布式事务介绍
+
 关于TCC（Try-Confirm-Cancel）的概念，最早是由Pat Helland于2007年发表的一篇名为《Life beyond Distributed Transactions:an Apostate’s Opinion》的论文提出。在该论文中，TCC还是以Tentative-Confirmation-Cancellation作为名称；正式以Try-Confirm-Cancel作为名称的，可能是Atomikos（Gregor Hohpe所著书籍《Enterprise Integration Patterns》中收录了关于TCC的介绍，提到了Atomikos的Try-Confirm-Cancel，并认为二者是相似的概念）。
 
 国内最早关于TCC的报道，应该是InfoQ上对阿里程立博士的一篇采访。经过程博士的这一次传道之后，TCC在国内逐渐被大家广为了解并接受。相应的实现方案和开源框架也先后被发布出来，ByteTCC就是其中之一。
@@ -20,15 +21,18 @@ TCC事务机制以初步操作（Try）为中心，确认操作（Confirm）和�
 
 
 
-
 #该tcc分布式事务框架特点
+
+
 1.支持分布式环境下的负载均衡，减少服务器压力
 2.有效解决单点故障。某消费者获得service任务后，突然宕机。其他线程可以继续执行该任务，不会出现任务丢失或者任务执行一部分的状态。
 3.业务逻辑解耦，用户只需要关注业务逻辑（实现tcc接口）。该插件保证业务的事务一致性。
 
 
 
-#该 tcc 分布式事务框架使用步骤
+#该tcc 分布式事务框架使用步骤
+
+
 1.tcc-util-0.0.1.jar加入自己资源库
 
 2.pom 引用
