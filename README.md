@@ -23,16 +23,15 @@
 
 2.	pom 引用
 
-    <dependency>
+
+   
+
+    	<dependency>
 	   <groupId>tcc</groupId>
 	   <artifactId>tcc-util</artifactId>
 	   <version>0.0.1-SNAPSHOT</version>
-	</dependency>
-   
-   
-   
+	  </dependency>
 
-   
    
 3.	自定义service实现接口tcc。例如：
 
@@ -56,7 +55,7 @@
      
      
      
-     
+
 4. 	创建tcc工具类的bean，需要注入属性jedisConnectionFactory，例如：
   <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"> 
         <property name="maxIdle" value="50" /> 
@@ -80,7 +79,10 @@
    
    
    
+
    
+   
+
 5.	使用分布式事务
    
    TccServiceUtil.executeService(TccServiceImpl.class, params);
