@@ -14,7 +14,11 @@
 
 二、	该tcc 分布式事务框架使用步骤
 
+
+
 1.	tcc-util-0.0.1.jar加入自己资源库
+
+
 
 
 2.	pom 引用
@@ -26,6 +30,8 @@
 	  </dependency>
    
    
+   
+
    
    
    
@@ -46,6 +52,13 @@
       //TODO 写自己的回滚程序
      }
      }
+     
+     
+     
+     
+     
+     
+     
 4. 	创建tcc工具类的bean，需要注入属性jedisConnectionFactory，例如：
   <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig"> 
         <property name="maxIdle" value="50" /> 
@@ -64,6 +77,12 @@
    <bean class="spring.tcc.service.TccServiceUtil">
    	<property name="jedisConnectionFactory" ref="jedisConnectionFactory"></property>
    </bean>
+   
+   
+   
+   
+   
+   
    
    
 5.	使用分布式事务
